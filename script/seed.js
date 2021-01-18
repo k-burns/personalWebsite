@@ -1,18 +1,30 @@
-'use strict'
-
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {Projects} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
+  const projects = await Promise.all([
+    Projects.create({
+      title: `Ariadne's VIM`,
+      details:
+        'A Phaser 3 game designed to teach simple VIM commands in a fun puzzle adventure',
+      img: '',
+      github: 'https://github.com/GeniusGuava/StressedBrains',
+      deployed: 'https://stressed-brains.herokuapp.com/'
+    }),
+    Projects.create({
+      title: 'Just Ducks',
+      details:
+        'E-commerce website providing a fun and smooth buying experience for rubber ducks',
+      img: '',
+      github: '​https://github.com/Honey-Bunches-Grace-Shopper/J​ ustDucks',
+      deployed: 'https://justducks.herokuapp.com/'
+    })
   ])
 
-  console.log(`seeded ${users.length} users`)
+  console.log(`seeded ${projects.length} projects`)
   console.log(`seeded successfully`)
 }
 
@@ -39,6 +51,3 @@ async function runSeed() {
 if (module === require.main) {
   runSeed()
 }
-
-// we export the seed function for testing purposes (see `./seed.spec.js`)
-module.exports = seed
