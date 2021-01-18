@@ -10,7 +10,8 @@ async function seed() {
       title: `Ariadne's VIM`,
       details:
         'A Phaser 3 game designed to teach simple VIM commands in a fun puzzle adventure',
-      img: '',
+      img:
+        'https://www.thoughtco.com/thmb/7g7LQAnUZcEWSThwdvIlFt2u2G0=/4560x2565/smart/filters:no_upscale()/duckling-close-up-500315849-572917c93df78ced1f0b99ec.jpg',
       github: 'https://github.com/GeniusGuava/StressedBrains',
       deployed: 'https://stressed-brains.herokuapp.com/'
     }),
@@ -18,7 +19,8 @@ async function seed() {
       title: 'Just Ducks',
       details:
         'E-commerce website providing a fun and smooth buying experience for rubber ducks',
-      img: '',
+      img:
+        'https://www.thoughtco.com/thmb/7g7LQAnUZcEWSThwdvIlFt2u2G0=/4560x2565/smart/filters:no_upscale()/duckling-close-up-500315849-572917c93df78ced1f0b99ec.jpg',
       github: '​https://github.com/Honey-Bunches-Grace-Shopper/J​ ustDucks',
       deployed: 'https://justducks.herokuapp.com/'
     })

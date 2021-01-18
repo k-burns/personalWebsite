@@ -7,8 +7,10 @@ import {Provider} from 'react-redux'
 import store from './store'
 
 ReactDOM.render(
-  <Router history={history}>
-    <App />
-  </Router>,
+  <Provider store={store}>
+    <Router history={history}>
+      <App />
+    </Router>
+  </Provider>,
   document.getElementById('app')
 )

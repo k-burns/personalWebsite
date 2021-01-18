@@ -30,14 +30,23 @@ export class SingleProduct extends React.Component {
     let {title, details, img, github, deployed} = project
 
     return (
-      <li id="singleProject">
-        <div className="projectInfo">
-          <h3>{title}</h3>
-          <h3>{details}</h3>
-          <h3>{github}</h3>
-          <h3>{deployed}</h3>
+      <div className="flip-card">
+        <div className="flip-card-inner">
+          <div className="front">
+            <img src={project.img} />
+          </div>
+          <div className="back">
+            <h1>{project.title}</h1>
+            <p>{project.details}</p>
+          </div>
         </div>
-      </li>
+        <a href={project.github} target="_blank">
+          github
+        </a>
+        <a href={project.deployed} target="_blank">
+          deployed
+        </a>
+      </div>
     )
   }
 }

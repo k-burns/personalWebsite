@@ -31,7 +31,7 @@ export const fetchProjects = () => async dispatch => {
   }
 }
 
-export default function(state = initialState, action) {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_PROJECTS:
       return action.projects
@@ -39,3 +39,5 @@ export default function(state = initialState, action) {
       return state
   }
 }
+
+export default reducer

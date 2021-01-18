@@ -11,22 +11,22 @@ const defaultState = {
   deployed: ''
 }
 
-class Projects extends React.Component {
+class Project extends React.Component {
   constructor(props) {
     super(props)
     this.state = defaultState
   }
   componentDidMount() {
-    console.log(this.props.getProjects)
     this.props.getProjects()
   }
   render() {
-    const projects = this.props.projects || {}
-    console.log(projects)
+    const projects = this.props.projects || []
+    console.log(this.props.projects)
     return (
       <div>
         <h1>Projects</h1>
-        <ol>
+        <h3>Click on an image for more detail</h3>
+        <div className="container">
           {projects.map(project => (
             <SingleProject
               project={project}
@@ -34,20 +34,20 @@ class Projects extends React.Component {
               getProjects={this.props.getProjects}
             />
           ))}
-        </ol>
+        </div>
       </div>
     )
   }
 }
 
 const mapState = state => ({
-  projects: state.projects
+  projects: state
 })
 
 const mapDispatch = dispatch => ({
-  getProducts: () => dispatch(fetchProjects())
+  getProjects: () => dispatch(fetchProjects())
 })
 
-connect(mapState, mapDispatch)(Projects)
+const Projects = connect(mapState, mapDispatch)(Project)
 
 export default Projects

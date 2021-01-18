@@ -5,6 +5,7 @@ body {
 
 a {
   text-decoration: none;
+  margin: 1em;
 }
 
 label {
@@ -19,4 +20,75 @@ nav a {
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+.container {
+  display: flex;
+  margin: 40px;
+}
+
+.flip-card {
+  position: relative;
+  display: block;
+  flex: 1 1 0px;
+  transition: transform 500ms;
+}
+
+.container:focus-within .flip-card,
+.container:hover .flip-card {
+  transform: translateX(-25%);
+}
+
+.flip-card:focus ~ .flip-card,
+.flip-card:hover ~ .flip-card {
+  transform: translateX(25%);
+}
+
+.container .flip-card:focus,
+.container .flip-card:hover {
+  transform: scale(1.25);
+  z-index: 1;
+}
+
+body {
+  overflow: hidden;
+}
+
+.flip-card img {
+  display: block;
+  max-width: 100%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:active .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
