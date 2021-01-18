@@ -11,7 +11,7 @@ async function seed() {
       details:
         'A Phaser 3 game designed to teach simple VIM commands in a fun puzzle adventure',
       img:
-        'https://www.thoughtco.com/thmb/7g7LQAnUZcEWSThwdvIlFt2u2G0=/4560x2565/smart/filters:no_upscale()/duckling-close-up-500315849-572917c93df78ced1f0b99ec.jpg',
+        'https://drive.google.com/uc?export=view&id=1xYtK39LOWAn1IPiG_a60Uaxi2IYZPf1v',
       github: 'https://github.com/GeniusGuava/StressedBrains',
       deployed: 'https://stressed-brains.herokuapp.com/'
     }),
@@ -20,7 +20,7 @@ async function seed() {
       details:
         'E-commerce website providing a fun and smooth buying experience for rubber ducks',
       img:
-        'https://www.thoughtco.com/thmb/7g7LQAnUZcEWSThwdvIlFt2u2G0=/4560x2565/smart/filters:no_upscale()/duckling-close-up-500315849-572917c93df78ced1f0b99ec.jpg',
+        'https://drive.google.com/uc?export=view&id=1a1o6n2LuYNBEFTzyhl8Llko2f4uJ8XuC',
       github: '​https://github.com/Honey-Bunches-Grace-Shopper/J​ ustDucks',
       deployed: 'https://justducks.herokuapp.com/'
     })
