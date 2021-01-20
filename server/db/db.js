@@ -15,9 +15,7 @@ const db =
           port: 5432,
           host: 'ec2-34-192-72-159.compute-1.amazonaws.com',
           logging: false, //false
-          ssl: {
-            rejectedUnauthorized: false
-          }
+          dialectOptions: {ssl: {rejectUnauthorized: true}}
         }
       )
     : new Sequelize(`postgres://localhost:5432/${databaseName}`, {
