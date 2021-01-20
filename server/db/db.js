@@ -17,7 +17,9 @@ const db =
           logging: false, //false
 
           dialectOptions: {
-            ssl: true
+            ssl: {
+              rejectedUnauthorized: true
+            }
           }
         }
       )
