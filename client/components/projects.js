@@ -21,7 +21,6 @@ class Project extends React.Component {
   }
   render() {
     const projects = this.props.projects || []
-    console.log(this.props.projects)
     return (
       <div>
         <h1>Projects</h1>

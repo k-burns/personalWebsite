@@ -21,7 +21,7 @@ async function seed() {
         'E-commerce website providing a fun and smooth buying experience for rubber ducks',
       img:
         'https://drive.google.com/uc?export=view&id=1a1o6n2LuYNBEFTzyhl8Llko2f4uJ8XuC',
-      github: '​https://github.com/Honey-Bunches-Grace-Shopper/J​ ustDucks',
+      github: 'https://github.com/Honey-Bunches-Grace-Shopper/JustDucks',
       deployed: 'https://justducks.herokuapp.com/'
     })
   ])

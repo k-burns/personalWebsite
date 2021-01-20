@@ -46,7 +46,7 @@ form div {
 
 .container .flip-card:focus,
 .container .flip-card:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
   z-index: 1;
 }
 
@@ -61,7 +61,7 @@ body {
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
+  width: 500px;
   height: 200px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -91,4 +91,8 @@ body {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
+}
+
+.links {
+  margin-top: 150px;
 }
