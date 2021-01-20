@@ -14,7 +14,7 @@ const db =
           protocol: 'postgres',
           port: 5432,
           host: 'ec2-34-192-72-159.compute-1.amazonaws.com',
-          logging: debug, //false
+          logging: false, //false
 
           dialectOptions: {
             ssl: true
