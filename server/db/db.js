@@ -16,7 +16,7 @@ const db =
           host: 'ec2-34-192-72-159.compute-1.amazonaws.com',
           logging: false, //false
           ssl: {
-            rejectedUnauthorized: true
+            rejectedUnauthorized: false
           }
         }
       )
