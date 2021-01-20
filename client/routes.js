@@ -5,6 +5,7 @@ import SocialMedia from './components/socialMedia'
 import Contact from './components/contact'
 import About from './components/about'
 import {Navbar} from './components'
+import Main from './components/main'
 
 const Routes = () => {
   return (
@@ -14,6 +15,7 @@ const Routes = () => {
       </div>
       <div>
         <main>
+          <Route exact path="/" component={Main} />
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={Contact} />
           <Route path="/socialMedia" component={SocialMedia} />

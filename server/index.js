@@ -74,7 +74,7 @@ const createApp = () => {
 const startListening = () => {
   // start listening (and create a 'server' object representing our server)
   const server = app.listen(PORT, () =>
-    console.log(`Quackin' it up on port ${PORT}, ${process.env}`)
+    console.log(`Quackin' it up on port ${PORT}`)
   )
 }
 

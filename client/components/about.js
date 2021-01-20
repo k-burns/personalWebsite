@@ -1,8 +1,6 @@
 import React from 'react'
 
 const About = props => {
-  const {name, displayName, handleSubmit, error} = props
-
   return (
     <div>
       I am a software engineer with a background in Psychology and education. I
