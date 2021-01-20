@@ -15,11 +15,8 @@ const db =
           port: 5432,
           host: 'ec2-34-192-72-159.compute-1.amazonaws.com',
           logging: false, //false
-
-          dialectOptions: {
-            ssl: {
-              rejectedUnauthorized: true
-            }
+          ssl: {
+            rejectedUnauthorized: false
           }
         }
       )
