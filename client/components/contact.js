@@ -8,8 +8,8 @@ const Contact = props => {
       <a href="mailto: katelynnburns655@gmail.com">
         katelynnburns655@gmail.com
       </a>
-      <h2>Phone</h2>
-      <h6>541-398-1208</h6>
+      <h2>Phone:</h2>
+      <a href="tel:+15413981208">541-398-1208</a>
     </div>
   )
 }
