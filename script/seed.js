@@ -23,6 +23,14 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1a1o6n2LuYNBEFTzyhl8Llko2f4uJ8XuC',
       github: 'https://github.com/Honey-Bunches-Grace-Shopper/JustDucks',
       deployed: 'https://justducks.herokuapp.com/'
+    }),
+    Projects.create({
+      title: `Don't Feed Ducks Bread`,
+      details:
+        'A relaxing Phaser 3 game about feeding ducks and how these snacks can help or hinder the ducks',
+      img:
+        'https://drive.google.com/uc?export=view&id=1pwxvZPBkEjuHNtgRN0Srl78vQ6rs1rsT',
+      github: 'https://github.com/k-burns/DontFeedDucks'
     })
   ])
 
