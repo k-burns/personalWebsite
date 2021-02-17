@@ -187,6 +187,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _singleTeam__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./singleTeam */ "./client/components/singleTeam.js");
+
 
 
 var Main = function Main(props) {
@@ -194,9 +196,7 @@ var Main = function Main(props) {
       displayName = props.displayName,
       handleSubmit = props.handleSubmit,
       error = props.error;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Welcome! This site is a work in progress. I am constantly making updates, so please come back often. Thank you for coming!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "This webpage is currently not designed for mobile. A more mobile version will be released in the future."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://i2-prod.manchestereveningnews.co.uk/incoming/article9313047.ece/ALTERNATES/s615/JS64312931.jpg"
-  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_singleTeam__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Main);
@@ -445,6 +445,38 @@ var SingleProduct = /*#__PURE__*/function (_React$Component) {
   return SingleProduct;
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 /* harmony default export */ __webpack_exports__["default"] = (SingleProduct);
+
+/***/ }),
+
+/***/ "./client/components/singleTeam.js":
+/*!*****************************************!*\
+  !*** ./client/components/singleTeam.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var SingleTeam = function SingleTeam(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-member"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-pic"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://drive.google.com/uc?export=view&id=1IXD5y1kGmrh8u8d5-a8TjyPErItgx7L6",
+    className: "profile-pic"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "team-info"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Katelynn Burns"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-content"
+  }, "Name: Katelynn Burns Favorite Part of the Stack Favorite Color Experience level: Fun Fact:"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SingleTeam);
 
 /***/ }),
 

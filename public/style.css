@@ -101,3 +101,34 @@ body {
 .title {
   font-family: Arial;
 }
+
+.team-pic {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15%;
+}
+
+.profile-pic {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.team-member .team-info {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.team-member:hover .team-info {
+  visibility: visible;
+}
