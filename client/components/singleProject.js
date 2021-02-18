@@ -46,9 +46,13 @@ export class SingleProduct extends React.Component {
           <a href={project.github} target="_blank">
             github
           </a>
-          <a href={project.deployed} target="_blank">
-            deployed
-          </a>
+          {project.deployed ? (
+            <a href={project.deployed} target="_blank">
+              deployed
+            </a>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     )

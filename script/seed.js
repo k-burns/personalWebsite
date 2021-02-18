@@ -57,7 +57,7 @@ async function seed() {
       experience: 'mid-level',
       hero: 'Captain America',
       fact:
-        'he actually perfers New Jersey bagels, he but is adamant that NYC pizza is the best'
+        'he actually prefers New Jersey bagels, he but is adamant that NYC pizza is the best'
     }),
     Team.create({
       name: 'Manga Blossom Duck',
@@ -68,7 +68,7 @@ async function seed() {
       experience: 'entry-level',
       hero: 'Swamp Thing',
       fact:
-        'she loves the Brooklyn Botanical Garden, especially the Sakura Festival'
+        'she loves visiting the Brooklyn Botanical Garden, especially during Sakura Matsuri'
     }),
     Team.create({
       name: 'Mwah Mwah Duck',
@@ -79,7 +79,7 @@ async function seed() {
       experience: 'mid-level',
       hero: 'Black Widow',
       fact:
-        'their favorite activity is kareoke and they perfre to sing songs from Musicals'
+        'their favorite activity is karaoke and they prefer to sing songs from Musicals'
     }),
     Team.create({
       name: 'Baby Zuko',
@@ -89,7 +89,7 @@ async function seed() {
       color: 'yellow',
       experience: 'entry-level',
       hero: 'Uncle Iroh',
-      fact: 'he loves swimming and his favorite snacks are peas and meal worms'
+      fact: 'he loves swimming and his favorite snacks are peas and mealworms'
     }),
     Team.create({
       name: 'Harley Quinn Duck',
@@ -100,7 +100,7 @@ async function seed() {
       experience: 'apprentice',
       hero: 'Posion Ivy',
       fact:
-        'She likes to take on problems head on which can lead to sticky situations, but he PhD is psychology helps her to be a great listener. She likes sushi and egg sandwiches.'
+        'Her favorite game is whack-a-mole. She likes sushi and egg sandwiches.'
     })
   ])
 
