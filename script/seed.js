@@ -1,5 +1,5 @@
 const db = require('../server/db')
-const {Projects} = require('../server/db/models')
+const {Projects, Team} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -35,6 +35,76 @@ async function seed() {
   ])
 
   console.log(`seeded ${projects.length} projects`)
+
+  const team = await Promise.all([
+    Team.create({
+      name: 'Katelynn Burns',
+      img:
+        'https://drive.google.com/uc?export=view&id=1IXD5y1kGmrh8u8d5-a8TjyPErItgx7L6',
+      stack: 'React',
+      color: 'blue and red',
+      experience: 'senior-level',
+      hero: 'Iron Man',
+      fact:
+        'along with supervising her team, she is also mom to three live ducks'
+    }),
+    Team.create({
+      name: 'NY Duck',
+      img:
+        'https://drive.google.com/uc?export=view&id=1eQKgT451ShTdzQTejxbmjtwWQiO70oZI',
+      stack: 'Express',
+      color: 'red',
+      experience: 'mid-level',
+      hero: 'Captain America',
+      fact:
+        'he actually perfers New Jersey bagels, he but is adamant that NYC pizza is the best'
+    }),
+    Team.create({
+      name: 'Manga Blossom Duck',
+      img:
+        'https://drive.google.com/uc?export=view&id=1fDB9DLjAhann5nxsnhzuzPdM_8iHIiwf',
+      stack: 'THREE.js',
+      color: 'magenta',
+      experience: 'entry-level',
+      hero: 'Swamp Thing',
+      fact:
+        'she loves the Brooklyn Botanical Garden, especially the Sakura Festival'
+    }),
+    Team.create({
+      name: 'Mwah Mwah Duck',
+      img:
+        'https://drive.google.com/uc?export=view&id=1B_zWGuVC0hyS2HFW04OGBccgFh0FOUpj',
+      stack: 'full-stack',
+      color: 'purple',
+      experience: 'mid-level',
+      hero: 'Black Widow',
+      fact:
+        'their favorite activity is kareoke and they perfre to sing songs from Musicals'
+    }),
+    Team.create({
+      name: 'Baby Zuko',
+      img:
+        'https://drive.google.com/uc?export=view&id=1saR5A1mnLMBHYjy4HpBmogikiNLOyVsh',
+      stack: 'css',
+      color: 'yellow',
+      experience: 'entry-level',
+      hero: 'Uncle Iroh',
+      fact: 'he loves swimming and his favorite snacks are peas and meal worms'
+    }),
+    Team.create({
+      name: 'Harley Quinn Duck',
+      img:
+        'https://drive.google.com/uc?export=view&id=1kcTC4SaW4Awh6keTy7unPmT27_-emdZh',
+      stack: 'Phaser 3',
+      color: 'read',
+      experience: 'apprentice',
+      hero: 'Posion Ivy',
+      fact:
+        'She likes to take on problems head on which can lead to sticky situations, but he PhD is psychology helps her to be a great listener. She likes sushi and egg sandwiches.'
+    })
+  ])
+
+  console.log(`seeded ${team.length} members`)
   console.log(`seeded successfully`)
 }
 

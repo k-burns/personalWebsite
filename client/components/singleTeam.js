@@ -1,23 +1,23 @@
 import React from 'react'
 
 const SingleTeam = props => {
+  const {member} = props
+  console.log(member)
   return (
-    <div>
-      <div className="team-member">
-        <div className="team-pic">
-          <img
-            src="https://drive.google.com/uc?export=view&id=1IXD5y1kGmrh8u8d5-a8TjyPErItgx7L6"
-            className="profile-pic"
-          />
-        </div>
-        <span className="team-info">
-          <div>Katelynn Burns</div>
-          <div className="team-content">
-            Name: Katelynn Burns Favorite Part of the Stack Favorite Color
-            Experience level: Fun Fact:
-          </div>
-        </span>
+    <div className="team-member">
+      <div className="team-pic">
+        <img src={member.img} className="profile-pic" />
       </div>
+      <span className="team-info">
+        <div className="team-name">{member.name}</div>
+        <div className="team-content">
+          <div>Favorite technology/Part of the Stack: {member.stack}</div>
+          <div>Favorite Color:{member.color} </div>
+          <div>Experience level: {member.experience} </div>
+          <div>Favorite Hero: {member.hero}</div>
+          <div>Fun Fact: {member.fact}</div>
+        </div>
+      </span>
     </div>
   )
 }

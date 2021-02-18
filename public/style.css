@@ -25,6 +25,7 @@ form div {
 .container {
   display: flex;
   margin: 40px;
+  width: 50px;
 }
 
 .flip-card {
@@ -61,8 +62,8 @@ body {
 
 .flip-card {
   background-color: transparent;
-  width: 500px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -95,7 +96,7 @@ body {
 }
 
 .links {
-  margin-top: 150px;
+  margin-top: 20px;
 }
 
 .title {
@@ -111,15 +112,23 @@ body {
 }
 
 .profile-pic {
-  display: inline;
-  margin: 0 auto;
   height: 100%;
-  width: auto;
+  width: 100%;
+}
+
+.team-member {
+  width: 100px;
+  margin: 15px;
+  border: hotpink;
+}
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .team-member .team-info {
   visibility: hidden;
-  width: 120px;
+  width: 200px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -131,4 +140,18 @@ body {
 
 .team-member:hover .team-info {
   visibility: visible;
+}
+
+.team-name {
+  color: dodgerblue;
+}
+
+.project-img {
+  width: 500px;
+  height: 300px;
+}
+
+.about {
+  margin: 25px;
+  margin-right: 300px;
 }

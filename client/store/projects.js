@@ -31,7 +31,7 @@ export const fetchProjects = () => async dispatch => {
   }
 }
 
-const reducer = (state = initialState, action) => {
+const teamReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_PROJECTS:
       return action.projects
@@ -40,4 +40,4 @@ const reducer = (state = initialState, action) => {
   }
 }
 
-export default reducer
+export default teamReducer

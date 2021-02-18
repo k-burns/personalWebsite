@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = props => {
   return (
-    <div>
+    <div className="about">
       I am a software engineer with a background in Psychology and education. I
       have always loved learning about how things work, including the structures
       of the brain. Psychology helped teach me to be patient and to remember

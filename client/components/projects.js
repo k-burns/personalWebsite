@@ -40,13 +40,11 @@ class Project extends React.Component {
 }
 
 const mapState = state => ({
-  projects: state
+  projects: state.projects
 })
 
 const mapDispatch = dispatch => ({
   getProjects: () => dispatch(fetchProjects())
 })
 
-const Projects = connect(mapState, mapDispatch)(Project)
-
-export default Projects
+export default connect(mapState, mapDispatch)(Project)

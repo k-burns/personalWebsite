@@ -30,11 +30,11 @@ export class SingleProduct extends React.Component {
     let {title, details, img, github, deployed} = project
 
     return (
-      <div>
+      <div className="project">
         <div className="flip-card">
           <div className="flip-card-inner">
             <div className="front">
-              <img src={project.img} />
+              <img src={project.img} className="project-img" />
             </div>
             <div className="back">
               <h1>{project.title}</h1>

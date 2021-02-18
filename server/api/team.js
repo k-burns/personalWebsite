@@ -1,11 +1,11 @@
-const Projects = require('../db/models/projects')
+const Team = require('../db/models/team')
 
 const router = require('express').Router()
 
 router.get('/', async (req, res, next) => {
   try {
-    const projects = await Projects.findAll()
-    res.json(projects)
+    const team = await Team.findAll()
+    res.json(team)
   } catch (err) {
     next(err)
   }
