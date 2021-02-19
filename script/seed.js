@@ -43,7 +43,7 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1IXD5y1kGmrh8u8d5-a8TjyPErItgx7L6',
       stack: 'React',
       color: 'blue and red',
-      experience: 'senior-level',
+      experience: 'senior-level (>1.5 years)',
       hero: 'Iron Man',
       fact:
         'along with supervising her team, she is also mom to three live ducks'
@@ -54,10 +54,10 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1eQKgT451ShTdzQTejxbmjtwWQiO70oZI',
       stack: 'Express',
       color: 'red',
-      experience: 'mid-level',
+      experience: 'mid-level(> 4 months)',
       hero: 'Captain America',
       fact:
-        'he actually prefers New Jersey bagels, he but is adamant that NYC pizza is the best'
+        'he actually prefers New Jersey bagels, but he is adamant that NYC pizza is the best'
     }),
     Team.create({
       name: 'Manga Blossom Duck',
@@ -65,7 +65,7 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1fDB9DLjAhann5nxsnhzuzPdM_8iHIiwf',
       stack: 'THREE.js',
       color: 'magenta',
-      experience: 'entry-level',
+      experience: 'entry-level (>3 months)',
       hero: 'Swamp Thing',
       fact:
         'she loves visiting the Brooklyn Botanical Garden, especially during Sakura Matsuri'
@@ -76,7 +76,7 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1B_zWGuVC0hyS2HFW04OGBccgFh0FOUpj',
       stack: 'full-stack',
       color: 'purple',
-      experience: 'mid-level',
+      experience: 'mid-level(>4 months)',
       hero: 'Black Widow',
       fact:
         'their favorite activity is karaoke and they prefer to sing songs from Musicals'
@@ -87,7 +87,7 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1saR5A1mnLMBHYjy4HpBmogikiNLOyVsh',
       stack: 'css',
       color: 'yellow',
-      experience: 'entry-level',
+      experience: 'mid-level (>4 months)',
       hero: 'Uncle Iroh',
       fact: 'he loves swimming and his favorite snacks are peas and mealworms'
     }),
@@ -96,8 +96,8 @@ async function seed() {
       img:
         'https://drive.google.com/uc?export=view&id=1kcTC4SaW4Awh6keTy7unPmT27_-emdZh',
       stack: 'Phaser 3',
-      color: 'read',
-      experience: 'apprentice',
+      color: 'red',
+      experience: 'apprentice (>2 months)',
       hero: 'Posion Ivy',
       fact:
         'Her favorite game is whack-a-mole. She likes sushi and egg sandwiches.'
