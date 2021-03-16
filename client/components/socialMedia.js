@@ -1,8 +1,6 @@
 import React from 'react'
 
 const SocialMedia = props => {
-  const {name, displayName, handleSubmit, error} = props
-
   return (
     <div>
       <h1>Social Media</h1>

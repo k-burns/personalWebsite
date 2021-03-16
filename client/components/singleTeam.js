@@ -2,7 +2,6 @@ import React from 'react'
 
 const SingleTeam = props => {
   const {member} = props
-  console.log(member)
   return (
     <div className="team-member">
       <div className="team-pic">

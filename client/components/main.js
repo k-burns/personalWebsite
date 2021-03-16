@@ -23,7 +23,6 @@ class Main extends React.Component {
   }
   render() {
     const team = this.props.team || []
-    console.log(team)
     return (
       <div>
         <div>Meet the Team:</div>

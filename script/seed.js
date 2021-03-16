@@ -98,7 +98,7 @@ async function seed() {
       stack: 'Phaser 3',
       color: 'red',
       experience: 'apprentice (>2 months)',
-      hero: 'Posion Ivy',
+      hero: 'Poison Ivy',
       fact:
         'Her favorite game is whack-a-mole. She likes sushi and egg sandwiches.'
     })

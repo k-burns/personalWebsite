@@ -1,27 +1,14 @@
 import axios from 'axios'
 
-/**
- * ACTION TYPES
- */
-
 const SET_PROJECTS = 'SET_PROJECTS'
 
-/**
- * INITIAL STATE
- */
 const initialState = []
 
-/**
- * ACTION CREATORS
- */
 export const setProjects = projects => ({
   type: SET_PROJECTS,
   projects
 })
 
-/**
- * THUNK CREATORS
- */
 export const fetchProjects = () => async dispatch => {
   try {
     const {data} = await axios.get('/api/projects')

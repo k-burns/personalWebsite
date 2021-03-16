@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Route, BrowserRouter as Router, Link} from 'react-router-dom'
+import React from 'react'
+import {Route, BrowserRouter as Router} from 'react-router-dom'
 import Projects from './components/projects'
 import SocialMedia from './components/socialMedia'
 import Contact from './components/contact'
