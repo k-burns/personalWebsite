@@ -30,7 +30,8 @@ async function seed() {
         'A relaxing Phaser 3 game about feeding ducks and how these snacks can help or hinder the ducks',
       img:
         'https://drive.google.com/uc?export=view&id=1pwxvZPBkEjuHNtgRN0Srl78vQ6rs1rsT',
-      github: 'https://github.com/k-burns/DontFeedDucks'
+      github: 'https://github.com/k-burns/DontFeedDucks',
+      deployed: 'http://dont-feed-ducks-bread.herokuapp.com/'
     })
   ])
 
