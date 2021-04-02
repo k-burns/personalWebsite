@@ -11,7 +11,7 @@ async function seed() {
       details:
         'A Phaser 3 game designed to teach simple VIM commands in a fun puzzle adventure',
       img:
-        'https://drive.google.com/uc?export=view&id=1xYtK39LOWAn1IPiG_a60Uaxi2IYZPf1v',
+        'https://drive.google.com/uc?export=view&id=13T7e0PXK0hPDT1PhMJ5xUQncvZaXrahv',
       github: 'https://github.com/GeniusGuava/StressedBrains',
       deployed: 'https://stressed-brains.herokuapp.com/'
     }),
