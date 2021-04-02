@@ -34,8 +34,10 @@ form div {
 
 .container {
   display: flex;
-  margin: 40px;
-  width: 50px;
+  flex-wrap: wrap;
+  /* margin: 40px;
+  width: 50px; */
+  overflow: visible;
 }
 
 .flip-card {
@@ -163,7 +165,7 @@ body {
 
 .about {
   margin: 25px;
-  margin-right: 300px;
+  margin-right: 20%;
 }
 
 .team-content {
