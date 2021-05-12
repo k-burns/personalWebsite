@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   background-color: #247ba0;
   color: #231942;
+  overflow: scroll;
 }
 
 p {
@@ -37,7 +38,6 @@ form div {
   flex-wrap: wrap;
   /* margin: 40px;
   width: 50px; */
-  overflow: visible;
 }
 
 .flip-card {
@@ -170,4 +170,10 @@ body {
 
 .team-content {
   margin: 15px;
+}
+
+.flex-project {
+  display: flex;
+  width: 90%;
+  overflow: scroll;
 }

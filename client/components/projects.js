@@ -22,7 +22,7 @@ class Project extends React.Component {
   render() {
     const projects = this.props.projects || []
     return (
-      <div>
+      <div className="flex-project">
         <h1>Projects</h1>
         <h3>Click on an image for more detail</h3>
         <div className="container">

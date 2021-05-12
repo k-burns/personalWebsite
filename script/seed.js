@@ -44,7 +44,7 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1IXD5y1kGmrh8u8d5-a8TjyPErItgx7L6',
       stack: 'React',
       color: 'blue and red',
-      experience: 'senior-level (<1 year)',
+      experience: 'senior-level (>1 year)',
       hero: 'Iron Man',
       fact:
         'along with supervising her team, she is also mom to three live ducks'
