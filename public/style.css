@@ -36,8 +36,6 @@ form div {
 .container {
   display: flex;
   flex-wrap: wrap;
-  /* margin: 40px;
-  width: 50px; */
 }
 
 .flip-card {
@@ -76,7 +74,7 @@ body {
   background-color: transparent;
   width: 400px;
   height: 300px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -162,6 +160,9 @@ body {
   width: 500px;
   height: 300px;
 }
+.project {
+  width: 20%;
+}
 
 .about {
   margin: 25px;
@@ -173,7 +174,7 @@ body {
 }
 
 .flex-project {
-  display: flex;
   width: 90%;
+  margin-left: 3em;
   overflow: scroll;
 }

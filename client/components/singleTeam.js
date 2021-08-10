@@ -10,7 +10,9 @@ const SingleTeam = props => {
       <span className="team-info">
         <div className="team-name">{member.name}</div>
         <div className="team-content">
-          <div>Favorite technology/Part of the Stack: {member.stack}</div>
+          <div>
+            Favorite Library/Technology/Part of the Stack: {member.stack}
+          </div>
           <div>Favorite Color: {member.color} </div>
           <div>Experience level: {member.experience} </div>
           <div>Favorite Hero: {member.hero}</div>

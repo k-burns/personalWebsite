@@ -32,6 +32,14 @@ async function seed() {
         'https://drive.google.com/uc?export=view&id=1pwxvZPBkEjuHNtgRN0Srl78vQ6rs1rsT',
       github: 'https://github.com/k-burns/DontFeedDucks',
       deployed: 'http://dont-feed-ducks-bread.herokuapp.com/'
+    }),
+    Projects.create({
+      title: 'Construct-A-Duck',
+      details: `An online 'rubber' duck maker. Build your own buddies to help you debug`,
+      img:
+        'https://drive.google.com/uc?export=view&id=1LjvyOFLJqso9_-kLsJCHKDv72LvZbkfj',
+      github: 'https://github.com/k-burns/constructaduck',
+      deployed: 'https://construct-a-duck.herokuapp.com/'
     })
   ])
 
