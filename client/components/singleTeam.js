@@ -5,7 +5,7 @@ const SingleTeam = props => {
   return (
     <div className="team-member">
       <div className="team-pic">
-        <img src={member.img} className="profile-pic" />
+        <img src={member.img} className="profile-pic" alt={member.name} />
       </div>
       <span className="team-info">
         <div className="team-name">{member.name}</div>

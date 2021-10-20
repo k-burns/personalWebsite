@@ -554,7 +554,8 @@ var SingleTeam = function SingleTeam(props) {
     className: "team-pic"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: member.img,
-    className: "profile-pic"
+    className: "profile-pic",
+    alt: member.name
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "team-info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
