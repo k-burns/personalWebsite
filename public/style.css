@@ -30,8 +30,29 @@ label {
 /* about */
 
 .about {
-  margin: 25px;
-  margin-right: 20%;
+  padding: 25px;
+  padding-right: 20%;
+  background: linear-gradient(#eeeeff 0%, #2f97c1 50%);
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1em;
+  margin-bottom: 2%;
+}
+
+/* contact */
+
+.contact-body {
+  margin-left: 5%;
+}
+
+.contact-body a {
+  margin-left: 5%;
 }
 
 /* navbar */
@@ -69,7 +90,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: center;
-  background-color: rgb(244, 91, 104, 0.75);
+  background-color: rgba(244, 91, 104, 0.75);
 }
 
 .project-img {
