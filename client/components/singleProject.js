@@ -33,7 +33,7 @@ export class SingleProduct extends React.Component {
         <div className="flip-card">
           <div className="flip-card-inner">
             <div className="front">
-              <img src={project.img} className="project-img" />
+              <img src={img} className="project-img" />
             </div>
             <div className="back">
               <h1>{project.title}</h1>
@@ -42,11 +42,11 @@ export class SingleProduct extends React.Component {
           </div>
         </div>
         <div className="links">
-          <a href={project.github} target="_blank">
+          <a href={project.github} target="_blank" rel="noreferrer">
             github
           </a>
           {project.deployed ? (
-            <a href={project.deployed} target="_blank">
+            <a href={project.deployed} target="_blank" rel="noreferrer">
               deployed
             </a>
           ) : (
