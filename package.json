@@ -44,6 +44,7 @@
     "axios": "^0.19.2",
     "compression": "^1.7.3",
     "connect-session-sequelize": "^6.1.1",
+    "emailjs-com": "^3.2.0",
     "express": "^4.16.4",
     "express-session": "^1.17.1",
     "history": "^4.10.1",
@@ -62,8 +63,11 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.4",
     "sequelize": "^5.22.3",
-    "socket.io": "^2.4.1"
+    "socket.io": "^2.4.1",
+    "sweetalert2": "^11.1.9"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
