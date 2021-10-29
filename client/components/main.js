@@ -25,7 +25,7 @@ class Main extends React.Component {
     const team = this.props.team || []
     return (
       <div>
-        <div>Meet the Team:</div>
+        <h2>Meet the Team:</h2>
         <div className="team-members">
           {team.map(member => (
             <SingleTeam

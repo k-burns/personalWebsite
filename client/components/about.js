@@ -42,9 +42,11 @@ const About = props => {
       </div>
       <div className="background">
         <h2>Hobbies</h2>
-        <ul>Playing RPGs</ul>
-        <ul>Reading</ul>
-        <ul>Drawing</ul>
+        <div className="hobbies">
+          <li>Playing RPGs</li>
+          <li>Reading</li>
+          <li>Drawing</li>
+        </div>
       </div>
     </div>
   )
