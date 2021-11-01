@@ -375,7 +375,6 @@ var Main = /*#__PURE__*/function (_React$Component) {
         });
       });
       var classes = document.querySelectorAll('.team-wrapper');
-      console.log(classes);
       classes.forEach(function (list) {
         observer.observe(list);
       });
@@ -398,9 +397,10 @@ var Main = /*#__PURE__*/function (_React$Component) {
                 return this.props.getTeam();
 
               case 2:
+                document.querySelector('.team-member').classList.add('team-animation');
                 window.addEventListener('scroll', this.handleScroll);
 
-              case 3:
+              case 4:
               case "end":
                 return _context.stop();
             }

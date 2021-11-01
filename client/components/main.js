@@ -21,6 +21,7 @@ class Main extends React.Component {
   }
   async componentDidMount() {
     await this.props.getTeam()
+    document.querySelector('.team-member').classList.add('team-animation')
     window.addEventListener('scroll', this.handleScroll)
   }
 
@@ -40,7 +41,6 @@ class Main extends React.Component {
       })
     })
     const classes = document.querySelectorAll('.team-wrapper')
-    console.log(classes)
     classes.forEach(list => {
       observer.observe(list)
     })

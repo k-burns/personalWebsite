@@ -345,7 +345,7 @@ nav {
 
 .team-animation {
   visibility: visible;
-  animation: 3s slide-right 0.1s forwards;
+  animation: 3s slide-right 0.05s forwards;
 }
 
 @keyframes slide-right {
