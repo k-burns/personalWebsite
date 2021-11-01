@@ -142,22 +142,6 @@ var About = function About(props) {
 
   var handleScroll = function handleScroll() {
     setOffsetY(window.pageYOffset);
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        var aboutContainer = entry.target.querySelector('.about-container');
-
-        if (entry.isIntersecting) {
-          aboutContainer.classList.add('about-animation');
-          return;
-        }
-
-        aboutContainer.classList.remove('about-animation');
-      });
-    });
-    var classes = document.querySelectorAll('.about-wrapper');
-    classes.forEach(function (list) {
-      observer.observe(list);
-    });
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
@@ -325,6 +309,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_team__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../store/team */ "./client/store/team.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -344,6 +332,8 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -370,14 +360,64 @@ var Main = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Main);
 
     _this = _super.call(this, props);
+
+    _defineProperty(_assertThisInitialized(_this), "handleScroll", function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var teamContainer = entry.target.querySelector('.team-member');
+
+          if (entry.isIntersecting) {
+            teamContainer.classList.add('team-animation');
+            return;
+          }
+
+          teamContainer.classList.remove('team-animation');
+        });
+      });
+      var classes = document.querySelectorAll('.team-wrapper');
+      console.log(classes);
+      classes.forEach(function (list) {
+        observer.observe(list);
+      });
+    });
+
     _this.state = defaultState;
+    _this.handleScroll = _this.handleScroll.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Main, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.getTeam();
+    value: function () {
+      var _componentDidMount = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return this.props.getTeam();
+
+              case 2:
+                window.addEventListener('scroll', this.handleScroll);
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      }
+
+      return componentDidMount;
+    }()
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
     }
   }, {
     key: "render",
@@ -753,6 +793,8 @@ __webpack_require__.r(__webpack_exports__);
 var SingleTeam = function SingleTeam(props) {
   var member = props.member;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "team-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "team-member"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "team-pic"
@@ -766,7 +808,7 @@ var SingleTeam = function SingleTeam(props) {
     className: "team-name"
   }, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "team-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Favorite Library/Technology/Part of the Stack: ", member.stack), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Favorite Color: ", member.color, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Experience level: ", member.experience, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Favorite Hero: ", member.hero), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fun Fact: ", member.fact))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Favorite Library/Technology/Part of the Stack: ", member.stack), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Favorite Color: ", member.color, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Experience level: ", member.experience, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Favorite Hero: ", member.hero), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Fun Fact: ", member.fact)))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SingleTeam);

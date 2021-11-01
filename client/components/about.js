@@ -4,20 +4,6 @@ const About = props => {
   const [offsetY, setOffsetY] = useState(0)
   const handleScroll = () => {
     setOffsetY(window.pageYOffset)
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const aboutContainer = entry.target.querySelector('.about-container')
-        if (entry.isIntersecting) {
-          aboutContainer.classList.add('about-animation')
-          return
-        }
-        aboutContainer.classList.remove('about-animation')
-      })
-    })
-    const classes = document.querySelectorAll('.about-wrapper')
-    classes.forEach(list => {
-      observer.observe(list)
-    })
   }
 
   useEffect(() => {

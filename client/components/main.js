@@ -17,10 +17,35 @@ class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = defaultState
+    this.handleScroll = this.handleScroll.bind(this)
   }
-  componentDidMount() {
-    this.props.getTeam()
+  async componentDidMount() {
+    await this.props.getTeam()
+    window.addEventListener('scroll', this.handleScroll)
   }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll = () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const teamContainer = entry.target.querySelector('.team-member')
+        if (entry.isIntersecting) {
+          teamContainer.classList.add('team-animation')
+          return
+        }
+        teamContainer.classList.remove('team-animation')
+      })
+    })
+    const classes = document.querySelectorAll('.team-wrapper')
+    console.log(classes)
+    classes.forEach(list => {
+      observer.observe(list)
+    })
+  }
+
   render() {
     const team = this.props.team || []
     return (
