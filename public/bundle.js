@@ -120,20 +120,94 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 var About = function About(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      offsetY = _useState2[0],
+      setOffsetY = _useState2[1];
+
+  var handleScroll = function handleScroll() {
+    setOffsetY(window.pageYOffset);
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var aboutContainer = entry.target.querySelector('.about-container');
+
+        if (entry.isIntersecting) {
+          aboutContainer.classList.add('about-animation');
+          return;
+        }
+
+        aboutContainer.classList.remove('about-animation');
+      });
+    });
+    var classes = document.querySelectorAll('.about-wrapper');
+    classes.forEach(function (list) {
+      observer.observe(list);
+    });
+  };
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    window.addEventListener('scroll', handleScroll);
+    return function () {
+      return window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  var renderDetails = function renderDetails() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-details"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-container"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      className: "background-header"
+    }, "Background"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am a software engineer with a background in Psychology and education. I have always loved learning about how things work, including the structures of the brain. Psychology helped teach me to be patient and to remember that everyone has their own story. I used this knowledge to help me as the lead teacher at a childcare and later as a live-in nanny."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      className: "about-container"
+    }, "I have been interested in coding since high school when I took a college level computers course and created a basic website. I was excited to get to create and learn basic coding, but being from a small town I didn't have the opportunity at the time to pursue more software engineering knowledge. I later moved to NYC and became a nanny. After moving to NYC I began to make friends who worked in different branches of the coding industry. I started to learn coding again and to create simple apps with them in my free time. The family I was nannying for moved and it felt like the perfect time for a new start to pursue software engineering. I attended the Grace Hopper program and Fullstack Academy. Since then I have been working on personal projects, studying algorithms, and looking for a team to continue the next step of my software engineering journey with.", ' ')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-container"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Why I love Software Engineering"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "It's combination of creativity and logical thinking"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "Having the ability to solve real world problems"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "There are so many languages, technologies, and libraries to learn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "about-container"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hobbies"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "hobbies"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Playing RPGs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Reading"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Drawing")))));
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "about"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "background"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Background"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am a software engineer with a background in Psychology and education. I have always loved learning about how things work, including the structures of the brain. Psychology helped teach me to be patient and to remember that everyone has their own story. I used this knowledge to help me as the lead teacher at a childcare and later as a live-in nanny."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I have been interested in coding since high school when I took a college level computers course and created a basic website. I was excited to get to create and learn basic coding, but being from a small town I didn't have the opportunity at the time to pursue more software engineering knowledge. I later moved to NYC and became a nanny. After moving to NYC I began to make friends who worked in different branches of the coding industry. I started to learn coding again and to create simple apps with them in my free time. The family I was nannying for moved and it felt like the perfect time for a new start to pursue software engineering. I attended the Grace Hopper program and Fullstack Academy. Since then I have been working on personal projects, studying algorithms, and looking for a team to continue the next step of my software engineering journey with.", ' '))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "background"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Why I love Software Engineering"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "It's combination of creativity and logical thinking"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "Having the ability to solve real world problems"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "There are so many languages, technologies, and libraries to learn"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "background"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Hobbies"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "hobbies"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Playing RPGs"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Reading"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Drawing"))));
+    className: "about-background",
+    style: {
+      transform: "translateY(".concat(offsetY * 0.5, "px)")
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-shapes",
+    style: {
+      transform: "translateY(".concat(offsetY * 0.8, "px)")
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "about-contents"
+  }, renderDetails()));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -167,13 +241,11 @@ var Contact = function Contact(props) {
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
     emailjs_com__WEBPACK_IMPORTED_MODULE_2__["default"].sendForm(serviceId, templateId, e.target, userId).then(function (result) {
-      console.log(result.text);
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
         icon: 'success',
         title: 'Message Sent! Thank You!'
       });
     }, function (error) {
-      console.log(error.text);
       sweetalert2__WEBPACK_IMPORTED_MODULE_3___default.a.fire({
         icon: 'error',
         title: 'Error Sending Message:',
@@ -457,14 +529,12 @@ var Project = /*#__PURE__*/function (_React$Component) {
   _createClass(Project, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log('mount');
       this.props.getProjects();
       this.rendered = true; // this.setColumns(this.props.projects.length, document.getElementById('project-container'))
     }
   }, {
     key: "createContainer",
     value: function createContainer(needed, div) {
-      console.log('con');
       var next = 0;
       var prev = 0;
 
@@ -491,12 +561,8 @@ var Project = /*#__PURE__*/function (_React$Component) {
 
       var curr = 0;
       var container = 1;
-      console.log('here');
-      console.log('there');
       this.rendered = false;
       projects.map(function (project) {
-        console.log('hi');
-
         if (curr > 1) {
           curr = 0;
           container++;
@@ -523,7 +589,6 @@ var Project = /*#__PURE__*/function (_React$Component) {
     key: "onFirstUpdate",
     value: function onFirstUpdate(needed, div, projects) {
       if (this.rendered) {
-        console.log('once');
         this.createContainer(needed, div);
         this.insertProjects(projects);
       }

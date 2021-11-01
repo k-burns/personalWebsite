@@ -12,14 +12,12 @@ const Contact = props => {
     e.preventDefault()
     emailjs.sendForm(serviceId, templateId, e.target, userId).then(
       result => {
-        console.log(result.text)
         Swal.fire({
           icon: 'success',
           title: 'Message Sent! Thank You!'
         })
       },
       error => {
-        console.log(error.text)
         Swal.fire({
           icon: 'error',
           title: 'Error Sending Message:',

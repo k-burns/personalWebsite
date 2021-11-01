@@ -23,13 +23,11 @@ class Project extends React.Component {
     this.onFirstUpdate = this.onFirstUpdate.bind(this)
   }
   componentDidMount() {
-    console.log('mount')
     this.props.getProjects()
     this.rendered = true
     // this.setColumns(this.props.projects.length, document.getElementById('project-container'))
   }
   createContainer(needed, div) {
-    console.log('con')
     let next = 0
     let prev = 0
     for (let i = 1; i <= needed; i++) {
@@ -53,11 +51,8 @@ class Project extends React.Component {
   insertProjects(projects) {
     let curr = 0
     let container = 1
-    console.log('here')
-    console.log('there')
     this.rendered = false
     projects.map(project => {
-      console.log('hi')
       if (curr > 1) {
         curr = 0
         container++
@@ -85,7 +80,6 @@ class Project extends React.Component {
 
   onFirstUpdate(needed, div, projects) {
     if (this.rendered) {
-      console.log('once')
       this.createContainer(needed, div)
       this.insertProjects(projects)
     }

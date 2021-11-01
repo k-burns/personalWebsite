@@ -38,23 +38,62 @@ h3 {
   margin-top: 20px;
 }
 
+hr {
+  margin-bottom: 0;
+}
+
 /* about */
 
 .about {
-  padding: 5%;
-  background: linear-gradient(#eeeeff 0%, #2f97c1 50%);
+  background: #f45b69;
+  width: 110%;
+  z-index: -1;
 }
 
 .about h2 {
   margin-top: 0;
 }
 
-.background {
+.about-details {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.about-contents {
+  padding-top: 15%;
+}
+
+.about-container {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 1em;
-  margin-bottom: 2%;
   border-radius: 20px;
   border: 2px solid #f45b69;
+  width: 70%;
+  height: 50%;
+  margin: 0% 0 15% 0;
+  /* animation: 2s slide-right 2s forwards; */
+  transform: translateX(-150%);
+  visibility: hidden;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-animation {
+  visibility: visible;
+  animation: 5s slide-right 0.1s forwards;
+}
+
+@keyframes slide-right {
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
 }
 
 .hobbies {
@@ -68,6 +107,27 @@ h3 {
 .hobbies li {
   padding: 0;
 }
+
+.about-background {
+  background-image: url(background.jpg);
+  height: 150%;
+  width: 100%;
+  position: absolute;
+  /* background-size: contain;
+  background-repeat: no-repeat; */
+  /* z-index: 1; */
+}
+
+.about-shapes {
+  background-image: url(shapes.png);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* z-index: 1; */
+}
+
 /* contact */
 
 .contact-body {
